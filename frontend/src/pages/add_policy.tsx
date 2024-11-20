@@ -47,7 +47,7 @@ const AddPolicy = () => {
     const token = localStorage.getItem('token');
     const timestamp = Math.floor(new Date(date).getTime()/ 1000).toString().slice(0, 10);
     try {
-      const response = await fetch('http://localhost:3000/policies', {
+      const response = await fetch('http://54.174.249.167:3000/policies', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

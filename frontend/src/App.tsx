@@ -8,7 +8,7 @@ function App() {
   const [policies, setPolicies] = useState<YearPolicy[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/policies/academic-year')
+    fetch('http://54.174.249.167:3000/policies/academic-year')
       .then(response => response.json())
       .then(data => {
         if (data.success) {
