@@ -31,7 +31,7 @@ export const PolicyList: React.FC<PolicyListProps> = ({ policies }) => {
   useEffect(() => {
     const fetchVotes = async (policyId: string) => {
       try {
-        const response = await fetch(`http://localhost:3000/policies/${policyId}/votes`);
+        const response = await fetch(`http://54.174.249.167:3000/policies/${policyId}/votes`);
         const data = await response.json();
         if (data.success) {
           setVotes((prevVotes) => ({
@@ -57,7 +57,7 @@ export const PolicyList: React.FC<PolicyListProps> = ({ policies }) => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/policies/${policyId}/upvote`, {
+      const response = await fetch(`http://54.174.249.167:3000/policies/${policyId}/upvote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export const PolicyList: React.FC<PolicyListProps> = ({ policies }) => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/policies/${policyId}/downvote`, {
+      const response = await fetch(`http://54.174.249.167:3000/policies/${policyId}/downvote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
